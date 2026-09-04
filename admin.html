@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — Emmaus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Emmaus home"><img src="school-logo.png" alt="School logo"><span>Emmaus</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="submit.html">Share a Request</a></li>
+        <li><a href="wall.html">Prayer Wall</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-hero admin-hero"><div class="container narrow"><p class="eyebrow">Private area</p><h1>Manage the prayer wall.</h1><p>Review, edit, or remove requests from the live community wall.</p></div></section>
+<section class="section">
+<div class="container">
+  <div id="admin-gate" class="admin-gate">
+    <div class="form-card">
+      <p class="eyebrow">Admin sign-in</p>
+      <h2>Welcome back.</h2>
+      <form id="admin-login-form">
+        <div class="field"><label for="admin-email">Email</label><input type="email" id="admin-email" autocomplete="username" required></div>
+        <div class="field"><label for="admin-password">Password</label><input type="password" id="admin-password" autocomplete="current-password" required></div>
+        <p id="admin-error" class="form-status error" aria-live="polite"></p>
+        <button type="submit" class="btn btn-primary form-submit">Sign in</button>
+      </form>
+    </div>
+  </div>
+  <div id="admin-panel" class="hidden">
+    <div class="admin-panel-head">
+      <div><p class="eyebrow">Private area</p><h2>Manage prayer requests</h2></div>
+      <button id="admin-logout" class="btn btn-ghost">Sign out</button>
+    </div>
+    <p class="admin-note">Changes made here appear on the live Prayer Wall.</p>
+    <div id="admin-list" class="admin-list"></div>
+  </div>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Emmaus</strong><span>Admin area.</span></div><a href="index.html">Back to site</a></div></footer>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

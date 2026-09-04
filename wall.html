@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayer Wall — Emmaus</title>
+<meta name="description" content="Walk with others by reading prayer requests and letting them know you are praying.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Emmaus home"><img src="school-logo.png" alt="School logo"><span>Emmaus</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="submit.html">Share a Request</a></li>
+        <li><a href="wall.html" aria-current="page">Prayer Wall</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero wall-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Walk with someone</p>
+      <h1>You're not walking alone.</h1>
+      <p>Every request represents a real person carrying something. Read, pause, and if you can, pray.</p>
+    </div>
+  </section>
+
+  <section class="section wall-section">
+    <div class="container">
+      <div class="wall-toolbar">
+        <div class="wall-stats" id="wall-stats" aria-live="polite">
+          <div><strong id="wall-request-count">—</strong><span>requests</span></div>
+          <div><strong id="wall-prayer-count">—</strong><span>prayers offered</span></div>
+        </div>
+        <a href="submit.html" class="btn btn-primary">Share a request <span>→</span></a>
+      </div>
+
+      <div class="filters-wrap">
+        <p class="filter-label">Browse by need</p>
+        <div class="filters" id="filter-bar" role="group" aria-label="Filter prayer requests">
+          <button class="filter-pill" data-category="All" aria-pressed="true">All</button>
+          <button class="filter-pill" data-category="Healing" aria-pressed="false">Healing</button>
+          <button class="filter-pill" data-category="Family" aria-pressed="false">Family</button>
+          <button class="filter-pill" data-category="Guidance" aria-pressed="false">Guidance</button>
+          <button class="filter-pill" data-category="Grief" aria-pressed="false">Grief</button>
+          <button class="filter-pill" data-category="Thanksgiving" aria-pressed="false">Thanksgiving</button>
+          <button class="filter-pill" data-category="Other" aria-pressed="false">Other</button>
+        </div>
+      </div>
+
+      <div class="card-grid wall-grid" id="wall-grid">
+        <div class="loading-state"><span class="spinner"></span> Opening the wall…</div>
+      </div>
+
+      <div class="wall-end">
+        <p>Every prayer matters.</p>
+        <span class="small-divider"></span>
+        <a href="submit.html" class="text-link">Need prayer? Place your own request →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>Emmaus</strong><span>A place to bring what you carry.</span></div>
+    <a href="about.html">Luke 24:13–35</a>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

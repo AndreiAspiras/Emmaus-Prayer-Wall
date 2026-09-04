@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share a Prayer Request — Emmaus</title>
+<meta name="description" content="Share a prayer request with the Emmaus community. Anonymous sharing is welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Emmaus home"><img src="school-logo.png" alt="School logo"><span>Emmaus</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="submit.html" aria-current="page">Share a Request</a></li>
+        <li><a href="wall.html">Prayer Wall</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Put it down</p>
+      <h1>What's on your heart?</h1>
+      <p>Write in your own words. You don't have to explain everything. Someone will read it, and pray.</p>
+    </div>
+  </section>
+
+  <section class="section form-section">
+    <div class="container form-layout">
+      <div class="form-side-note">
+        <span class="quote-mark">“</span>
+        <h2>You can be honest here.</h2>
+        <p>Some burdens are difficult to say out loud. Share only what you're comfortable placing on the wall.</p>
+        <div class="mini-guidelines">
+          <div><span>01</span><p>Keep private details private.</p></div>
+          <div><span>02</span><p>You may remain anonymous.</p></div>
+          <div><span>03</span><p>Be kind and respectful.</p></div>
+        </div>
+        <a href="about.html#guidelines" class="text-link">Read the community guidelines →</a>
+      </div>
+
+      <div class="form-card">
+        <form id="prayer-form" novalidate>
+          <div class="field">
+            <label class="checkbox-row">
+              <input type="checkbox" id="anonymous">
+              <span>Post this anonymously</span>
+            </label>
+          </div>
+          <div class="field" id="name-field">
+            <label for="name">Your name <span class="optional">Optional</span></label>
+            <input type="text" id="name" maxlength="60" autocomplete="name" placeholder="e.g. Sarah">
+          </div>
+          <div class="field">
+            <label for="category">What kind of prayer is this?</label>
+            <select id="category">
+              <option value="Healing">Healing</option>
+              <option value="Family">Family</option>
+              <option value="Guidance">Guidance</option>
+              <option value="Grief">Grief</option>
+              <option value="Thanksgiving">Thanksgiving</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="request">Your prayer request</label>
+            <textarea id="request" maxlength="1000" required placeholder="Share what you're carrying…"></textarea>
+            <div class="field-bottom"><p class="hint">Please avoid identifying details about other people without their consent.</p><span id="request-count">0 / 1000</span></div>
+          </div>
+          <div class="form-consent"><span aria-hidden="true">♡</span><p>By sharing, you understand that your request may be read by anyone who visits the Prayer Wall.</p></div>
+          <button type="submit" class="btn btn-primary form-submit">Place my prayer <span>→</span></button>
+          <p id="prayer-form-status" class="form-status" aria-live="polite"></p>
+        </form>
+
+        <div class="confirmation" id="confirmation">
+          <div class="confirmation-icon">♡</div>
+          <p class="eyebrow">Your prayer has been heard</p>
+          <h2>You don't have to carry it alone.</h2>
+          <p>Your request is now on the Prayer Wall, where others can choose to pray with you.</p>
+          <div class="btn-row center">
+            <a href="wall.html" class="btn btn-primary">Walk the Prayer Wall</a>
+            <a href="index.html" class="btn btn-ghost">Return home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>Emmaus</strong><span>A place to bring what you carry.</span></div>
+    <a href="about.html">Luke 24:13–35</a>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

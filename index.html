@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emmaus — A Place to Bring What You Carry</title>
+<meta name="description" content="Emmaus is a quiet place to bring what weighs on your heart, share a prayer request, and pray for others.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Emmaus home">
+      <img src="school-logo.png" alt="School logo">
+      <span>Emmaus</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="submit.html">Share a Request</a></li>
+        <li><a href="wall.html">Prayer Wall</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="road-line road-line-one"></div>
+    <div class="road-line road-line-two"></div>
+    <div class="container hero-inner">
+      <p class="eyebrow">A place to bring what you carry</p>
+      <h1>You don't have to carry it <em>alone.</em></h1>
+      <p class="hero-copy">A quiet place to bring what's heavy, share a prayer request, and discover that someone is willing to walk with you.</p>
+      <div class="btn-row hero-actions">
+        <a href="submit.html" class="btn btn-primary">Share what you're carrying <span>→</span></a>
+        <a href="wall.html" class="btn btn-ghost">Walk the prayer wall</a>
+      </div>
+      <div class="hero-note">
+        <span class="dot"></span>
+        No account required · Anonymous sharing available
+      </div>
+    </div>
+  </section>
+
+  <section class="section intro-section">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">The Emmaus idea</p>
+        <h2>Sometimes the first answer is simply knowing you're not walking alone.</h2>
+        <p>In Luke 24, two disciples walked toward Emmaus carrying grief and confusion. Jesus came near and walked with them. Emmaus carries that same idea into a simple online space: bring what you carry, and let others walk with you in prayer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The journey</p>
+        <h2>A simple walk, taken together.</h2>
+        <p>You don't need to have the right words. You only need a place to begin.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <span class="step-number">01</span>
+          <div class="step-icon" aria-hidden="true">↘</div>
+          <h3>Bring it</h3>
+          <p>Share what's on your heart in your own words. Keep your name private if you'd rather.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">02</span>
+          <div class="step-icon" aria-hidden="true">♡</div>
+          <h3>Release it</h3>
+          <p>Place the request on the wall and let a praying community carry a piece of the burden with you.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">03</span>
+          <div class="step-icon" aria-hidden="true">→</div>
+          <h3>Walk together</h3>
+          <p>When someone taps “I'm praying,” you get a small reminder: someone chose to stand with you.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section scripture-section">
+    <div class="container scripture-layout">
+      <div>
+        <p class="eyebrow">A word for the road</p>
+        <h2>“Jesus himself drew near, and went with them.”</h2>
+        <p class="scripture-reference">Luke 24:15 · King James Version</p>
+      </div>
+      <div class="verse-mark" aria-hidden="true">“</div>
+    </div>
+  </section>
+
+  <section class="section wall-preview-section">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow">The prayer wall</p>
+          <h2>Someone may be carrying something today.</h2>
+        </div>
+        <a href="wall.html" class="text-link">Walk the whole wall →</a>
+      </div>
+      <div class="wall-stats" id="home-stats" aria-live="polite">
+        <div><strong id="home-request-count">—</strong><span>requests shared</span></div>
+        <div><strong id="home-prayer-count">—</strong><span>prayers offered</span></div>
+      </div>
+      <div class="card-grid" id="recent-preview">
+        <div class="loading-state"><span class="spinner"></span> Opening the wall…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="container final-cta-inner">
+      <p class="eyebrow">Whatever you're carrying</p>
+      <h2>You don't have to carry it alone.</h2>
+      <p>Put it down for a moment. Let someone pray with you.</p>
+      <div class="btn-row">
+        <a href="submit.html" class="btn btn-primary">Share a prayer request</a>
+        <a href="about.html" class="btn btn-ghost">Why Emmaus?</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>Emmaus</strong><span>A place to bring what you carry.</span></div>
+    <a href="about.html">Luke 24:13–35</a>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
